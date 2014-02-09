@@ -7,7 +7,7 @@
 	
 	<ui:with type="com.gwt.cardlayout.resources.ICardResources" field="resource"></ui:with>
 	
-	<g:HTMLPanel styleName="{resource.getStyle.panel}">
+	<g:HTMLPanel ui:field="panel" styleName="{resource.getStyle.panel}">
 		<g:HTMLPanel ui:field="header" styleName="{resource.getStyle.header}">
 			<g:HTMLPanel ui:field="headerText" styleName="{resource.getStyle.text}"/>
 			<g:HTMLPanel ui:field="buttonBar" styleName="{resource.getStyle.buttonBar}">

@@ -1,7 +1,6 @@
 package com.gwt.cardlayout.client;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.Style.Overflow;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -38,6 +37,9 @@ public class Card extends Composite implements TakesValue<ICardData> {
 
 	@UiField
 	HTMLPanel content;
+
+	@UiField
+	HTMLPanel panel;
 
 	@UiField
 	FocusPanel refresh;
@@ -98,10 +100,9 @@ public class Card extends Composite implements TakesValue<ICardData> {
 	void onExpandClicked(ClickEvent event) {
 		PopupPanel popupPanel = new PopupPanel(true, true);
 		popupPanel.setAnimationEnabled(true);
-		Card duplicate = this;
-		duplicate.hideButtonBar();
-		duplicate.content.getElement().getStyle().setOverflow(Overflow.VISIBLE);
-		popupPanel.add(duplicate);
+		ExpandedCard expandedCard = new ExpandedCard();
+		expandedCard.setValue(cardData);
+		popupPanel.add(expandedCard);
 		popupPanel.setGlassEnabled(true);
 		popupPanel.center();
 	}
