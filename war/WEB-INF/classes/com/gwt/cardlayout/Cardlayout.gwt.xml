@@ -27,5 +27,6 @@
   <source path='client'/>
   <source path='model'/>
   <source path='resources'/>
+  <source path='event'/>
 
 </module>

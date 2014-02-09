@@ -9,4 +9,16 @@ public interface ICardCssRescource extends CssResource {
 	String content();
 
 	String panel();
+
+	String text();
+
+	String buttonBar();
+
+	String add();
+
+	String refresh();
+
+	String expand();
+
+	String button();
 }
